@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,33 +9,40 @@ public class Game extends PrepareGame {
     private final char[] gameInProgress;
     private int numberOfTry;
     private ArrayList<Character> usedLetters;
-
+    private GUI gui;
     Game(Dictionary dictionary) {
         super(dictionary);
         gameInProgress = emptyGame;
         numberOfTry=1;
         usedLetters = new ArrayList<Character>();
-        System.out.println("Witaj w wisielcu!");
-        String displayedText = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " +
+        String displayedText2 = ("Próba nr "+numberOfTry);
+        String displayedText1 = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " +
                 "wykorzystane litery: "+usedLetters;
-        System.out.println("Próba nr "+numberOfTry);
-        System.out.println(displayedText);
-        gameLoop();
+        gui = new GUI("Zgadnij słowo");
+        gui.board.setText("<html>"+displayedText1+"<br>"+displayedText2+"</html>");
+        gui.setVisible(true);
+        gameLoop(gui.textField);
 
     }
 
-    public void gameLoop() {
-        Scanner scanner = new Scanner(System.in);
+    public void gameLoop(JTextField textField) {
         while (!Arrays.equals(wordToBeGuessed,gameInProgress)) {
-            char typedChar = scanner.next().charAt(0);
-            if (!(letterPresence(typedChar, wordToBeGuessed, gameInProgress))) usedLetters.add(typedChar);
-            String displayedText = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " +
-                    "wykorzystane litery: "+usedLetters;
-            numberOfTry++;
-            System.out.println("Próba nr "+numberOfTry);
-            System.out.println(displayedText);
+            textField.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String typed = textField.getText();
+                    char typedChar = typed.charAt(0);
+                    textField.setText("");
+                    if (!(letterPresence(typedChar, wordToBeGuessed, gameInProgress))) usedLetters.add(typedChar);
+                    String displayedText1 = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " +
+                            "wykorzystane litery: "+usedLetters;
+                    numberOfTry++;
+                    String displayedText2="Próba nr "+numberOfTry;
+                    gui.board.setText("<html>"+displayedText1+"<br>"+displayedText2+"</html>");
+                }
+            });
         }
-        System.out.println("Wygrana w " + numberOfTry +" próbach! Słowo do zgadnięcia to " + String.valueOf(wordToBeGuessed));
+        gui.board.setText("Wygrana w " + numberOfTry +" próbach! Słowo do zgadnięcia to " + String.valueOf(wordToBeGuessed));
     }
 
     public boolean letterPresence(char x, char[] fullWord, char[] game) {
