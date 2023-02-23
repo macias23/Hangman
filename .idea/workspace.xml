@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Początkowy commit">
-      <change afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="dodanie JFRAME">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ideas" beforeDir="false" afterPath="$PROJECT_DIR$/Ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrepareGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrepareGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Dictionary">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Dictionary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dictionary" />
       <module name="ZgadnijSlowo" />
@@ -75,9 +76,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Game" />
         <item itemvalue="Application.Dictionary" />
         <item itemvalue="Application.GUI" />
-        <item itemvalue="Application.Game" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +92,7 @@
       <updated>1677005696541</updated>
       <workItem from="1677005697667" duration="2440000" />
       <workItem from="1677056760591" duration="2303000" />
-      <workItem from="1677091792716" duration="8423000" />
+      <workItem from="1677091792716" duration="17665000" />
     </task>
     <task id="LOCAL-00001" summary="Początkowy commit">
       <created>1677149131656</created>
@@ -100,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677149131656</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dodanie JFRAME">
+      <created>1677153769673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677153769673</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,19 +127,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Początkowy commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Początkowy commit" />
+    <MESSAGE value="dodanie JFRAME" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie JFRAME" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>23</line>
+          <line>17</line>
           <properties class="GUI" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>62</line>
+          <properties class="Game" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

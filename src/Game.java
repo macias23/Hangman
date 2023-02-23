@@ -1,8 +1,10 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Dictionary;
 import java.util.Scanner;
 
 public class Game extends PrepareGame {
@@ -10,29 +12,31 @@ public class Game extends PrepareGame {
     private int numberOfTry;
     private ArrayList<Character> usedLetters;
     private GUI gui;
-    Game(Dictionary dictionary) {
-        super(dictionary);
+    Game()throws IOException {
+        super("dictionary");
         gameInProgress = emptyGame;
         numberOfTry=1;
         usedLetters = new ArrayList<Character>();
+        gui = new GUI("wisielec");
         String displayedText2 = ("Próba nr "+numberOfTry);
         String displayedText1 = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " +
                 "wykorzystane litery: "+usedLetters;
         gui = new GUI("Zgadnij słowo");
         gui.board.setText("<html>"+displayedText1+"<br>"+displayedText2+"</html>");
         gui.setVisible(true);
-        gameLoop(gui.textField);
+        gameLoop();
 
     }
 
-    public void gameLoop(JTextField textField) {
+    public void gameLoop() {
+
         while (!Arrays.equals(wordToBeGuessed,gameInProgress)) {
-            textField.addActionListener(new ActionListener() {
+            gui.textField.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    String typed = textField.getText();
+                    String typed = gui.textField.getText();
                     char typedChar = typed.charAt(0);
-                    textField.setText("");
+                    gui.textField.setText("");
                     if (!(letterPresence(typedChar, wordToBeGuessed, gameInProgress))) usedLetters.add(typedChar);
                     String displayedText1 = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " +
                             "wykorzystane litery: "+usedLetters;
@@ -45,6 +49,7 @@ public class Game extends PrepareGame {
         gui.board.setText("Wygrana w " + numberOfTry +" próbach! Słowo do zgadnięcia to " + String.valueOf(wordToBeGuessed));
     }
 
+
     public boolean letterPresence(char x, char[] fullWord, char[] game) {
         boolean letterPresence = false;
         for (int i = 0; i < fullWord.length; i++) {
@@ -55,5 +60,7 @@ public class Game extends PrepareGame {
         }
         return letterPresence;
     }
-
+    public static void main(String[] args) throws IOException{
+    new Game();
+    }
 }
