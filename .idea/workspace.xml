@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Słownik">
+    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Usunięcie dodawania się wiele razy tych samych liter do tablicy wykorzystanych.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ideas" beforeDir="false" afterPath="$PROJECT_DIR$/Ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrepareGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrepareGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +74,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="ZgadnijSlowo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Game" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.GUI" />
         <item itemvalue="Application.Dictionary" />
       </list>
@@ -91,7 +101,7 @@
       <workItem from="1677005697667" duration="2440000" />
       <workItem from="1677056760591" duration="2303000" />
       <workItem from="1677091792716" duration="17756000" />
-      <workItem from="1677259285147" duration="1757000" />
+      <workItem from="1677259285147" duration="5403000" />
     </task>
     <task id="LOCAL-00001" summary="Początkowy commit">
       <created>1677149131656</created>
@@ -114,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677181654737</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Usunięcie dodawania się wiele razy tych samych liter do tablicy wykorzystanych.">
+      <created>1677321885567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677321885567</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,26 +152,7 @@
     <MESSAGE value="Początkowy commit" />
     <MESSAGE value="dodanie JFRAME" />
     <MESSAGE value="Słownik" />
-    <option name="LAST_COMMIT_MESSAGE" value="Słownik" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>59</line>
-          <properties class="Game" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Usunięcie dodawania się wiele razy tych samych liter do tablicy wykorzystanych." />
+    <option name="LAST_COMMIT_MESSAGE" value="Usunięcie dodawania się wiele razy tych samych liter do tablicy wykorzystanych." />
   </component>
 </project>

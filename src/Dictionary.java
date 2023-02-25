@@ -9,12 +9,12 @@ public class Dictionary {
     private ArrayList<String> wordlist;
     private ArrayList<char[]> processedWordlist;
 
-    Dictionary(String fileName) throws IOException{
+    Dictionary(String fileName) {
         wordlist=readWordlist(fileName);
         processedWordlist = processWordlist(wordlist);
     }
 
-    public ArrayList<String> readWordlist(String filename) throws IOException {
+    public ArrayList<String> readWordlist(String filename) {
         String csvFile = filename+".csv";
         String line = "";
         String csvSplitBy = ",";
