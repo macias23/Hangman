@@ -57,4 +57,8 @@ public class Dictionary {
     public void setProcessedWordlist(ArrayList<char[]> processedWordlist) {
         this.processedWordlist = processedWordlist;
     }
+
+    public ArrayList<String> getWordlist() {
+        return wordlist;
+    }
 }

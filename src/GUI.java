@@ -1,11 +1,10 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class GUI extends JFrame {
     public JPanel mainPanel;
     public JTextField textField;
     public JLabel board;
+    public JButton solve;
 
     public GUI(String title){
         super(title);
