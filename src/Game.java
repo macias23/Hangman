@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -30,6 +31,7 @@ public class Game extends PrepareGame {
         gui = new GUI("Zgadnij słowo");
         gui.board.setText(boardText);
         gui.setVisible(true);
+        gui.pack();
         gameLoop();
 
     }
@@ -73,13 +75,21 @@ public class Game extends PrepareGame {
                     boardText = "<html>" + tryInfo + "<br>" + gameInfo + "<br>" + message + "</html>";
                     gui.board.setText(boardText);
                     gui.textField.setText("");
+                    gui.pack();
                 }
             });
         }
-        if(solvedByUser) gui.board.setText("<html>" + "<strong style=color:green>" + "Wygrana " + "</strong>"+"w " + numberOfTry + " próbach!" + "<br>"+"Słowo do zgadnięcia to " +
-                "<strong style=color:green>" + String.valueOf(wordToBeGuessed) + "</strong>" + "</html>");
-        else gui.board.setText("<html>" +  "<strong style=color:red>" + "Przegrana :( "+ "</strong>" +"<br>" +"Słowo do zgadnięcia to " +
-                "<strong style=color:red>" + String.valueOf(wordToBeGuessed) + "</strong>" + "</html>");
+        if(solvedByUser) {
+            gui.board.setText("<html>" + "<strong style=color:green>" + "Wygrana " + "</strong>"+"w " + numberOfTry + " próbach!" + "<br>"+"Słowo do zgadnięcia to " +
+                    "<strong style=color:green>" + String.valueOf(wordToBeGuessed) + "</strong>" + "</html>");
+            gui.pack();
+        }
+        else{
+            gui.board.setText("<html>" +  "<strong style=color:red>" + "Przegrana :( "+ "</strong>" +"<br>" +"Słowo do zgadnięcia to " +
+                    "<strong style=color:red>" + String.valueOf(wordToBeGuessed) + "</strong>" + "</html>");
+            gui.pack();
+        }
+
     }
 
     public static void main(String[] args) throws IOException {

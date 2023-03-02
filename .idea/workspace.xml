@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Dodanie formatowania tekstu i możliwości zgadnięcia całego słowa na raz.">
+    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ideas" beforeDir="false" afterPath="$PROJECT_DIR$/Ideas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrepareGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrepareGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,24 +34,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ToolWindowDebug.ShowToolbar": "false",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/maciejlipski/Library/Mobile Documents/com~apple~CloudDocs/Studia/JavaDlaSiebie/ZgadnijSlowo/ZgadnijSlowo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowDebug.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/maciejlipski/Library/Mobile Documents/com~apple~CloudDocs/Studia/JavaDlaSiebie/ZgadnijSlowo/ZgadnijSlowo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Game">
     <configuration name="Dictionary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dictionary" />
@@ -108,7 +105,8 @@
       <workItem from="1677325683534" duration="608000" />
       <workItem from="1677482697033" duration="1079000" />
       <workItem from="1677521052615" duration="1829000" />
-      <workItem from="1677585791950" duration="1767000" />
+      <workItem from="1677585791950" duration="4005000" />
+      <workItem from="1677696904943" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Początkowy commit">
       <created>1677149131656</created>
@@ -145,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677325645818</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami">
+      <created>1677588016502</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677588016502</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +173,7 @@
     <MESSAGE value="Słownik" />
     <MESSAGE value="Usunięcie dodawania się wiele razy tych samych liter do tablicy wykorzystanych." />
     <MESSAGE value="Dodanie formatowania tekstu i możliwości zgadnięcia całego słowa na raz." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie formatowania tekstu i możliwości zgadnięcia całego słowa na raz." />
+    <MESSAGE value="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami" />
   </component>
 </project>
