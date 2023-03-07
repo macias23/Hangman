@@ -21,7 +21,7 @@ public class Game extends PrepareGame {
         super("dictionary");
         gameInProgress = emptyGame;
         numberOfTry = 1;
-        solvedByUser=true;
+        solvedByUser = true;
         wrongUsedLetters = new HashSet<>();
         correctUsedLetters = new HashSet<>();
         tryInfo = "Próba nr " + numberOfTry;
@@ -33,62 +33,68 @@ public class Game extends PrepareGame {
         gui.setVisible(true);
         gui.pack();
         gameLoop();
-
     }
 
-    public void gameLoop() {
-        while (!Arrays.equals(wordToBeGuessed, gameInProgress)) {
-            gui.solve.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    gameInProgress=wordToBeGuessed;
-                    solvedByUser=false;
-                }
-            });
-            gui.textField.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    String typed = gui.textField.getText();
-                    char typedChar = typed.charAt(0);
-                    if (typed.length() > 1) {
-                        if (typed.equals(fullWord)) {
-                            gameInProgress = wordToBeGuessed;
-                        } else {
-                            message = "<html>" + "Wyraz do zgadnięcia to nie " + "<strong style=color:red>" + typed + "</strong>";
-                            numberOfTry++;
-                        }
+    public ActionListener dataListiner() {
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String typed = gui.textField.getText();
+                char typedChar = typed.charAt(0);
+                if (typed.length() > 1) {
+                    if (typed.equals(fullWord)) {
+                        gameInProgress = wordToBeGuessed;
                     } else {
-                        if (wrongUsedLetters.contains(typedChar) || correctUsedLetters.contains(typedChar)) {
-                            message = "<html>" + "Już pytałeś o literę " + "<strong>" + typedChar + "</strong>" + ".";
-                        } else if (!(letterPresence(typedChar, wordToBeGuessed, gameInProgress))) {
-                            wrongUsedLetters.add(typedChar);
-                            message = "<html>" + "Litera " + "<strong style=color:red>" + typedChar + "</strong>" + " nie znajduje się w wyrazie.";
-                            numberOfTry++;
-                        } else {
-                            message = "<html>" + "Litera " + "<strong style=color:green>" + typedChar + "</strong>" + " znajduje się w wyrazie.";
-                            correctUsedLetters.add(typedChar);
-                            numberOfTry++;
-                        }
+                        message = "<html>" + "Wyraz do zgadnięcia to nie " + "<strong style=color:red>" + typed + "</strong>";
+                        numberOfTry++;
                     }
-                    tryInfo = "Próba nr " + numberOfTry;
-                    gameInfo = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " + "wykorzystane litery: " + wrongUsedLetters;
-                    boardText = "<html>" + tryInfo + "<br>" + gameInfo + "<br>" + message + "</html>";
-                    gui.board.setText(boardText);
-                    gui.textField.setText("");
-                    gui.pack();
+                } else {
+                    if (wrongUsedLetters.contains(typedChar) || correctUsedLetters.contains(typedChar)) {
+                        message = "<html>" + "Już pytałeś o literę " + "<strong>" + typedChar + "</strong>" + ".";
+                    } else if (!(letterPresence(typedChar, wordToBeGuessed, gameInProgress))) {
+                        wrongUsedLetters.add(typedChar);
+                        message = "<html>" + "Litera " + "<strong style=color:red>" + typedChar + "</strong>" + " nie znajduje się w wyrazie.";
+                        numberOfTry++;
+                    } else {
+                        message = "<html>" + "Litera " + "<strong style=color:green>" + typedChar + "</strong>" + " znajduje się w wyrazie.";
+                        correctUsedLetters.add(typedChar);
+                        numberOfTry++;
+                    }
                 }
-            });
-        }
+                tryInfo = "Próba nr " + numberOfTry;
+                gameInfo = "Plansza do gry: " + Arrays.toString(gameInProgress) + " " + "wykorzystane litery: " + wrongUsedLetters;
+                boardText = "<html>" + tryInfo + "<br>" + gameInfo + "<br>" + message + "</html>";
+                gui.board.setText(boardText);
+                gui.textField.setText("");
+                gui.pack();
+            }
+        };
+    }
+    public ActionListener solveListiner(){
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameInProgress=wordToBeGuessed;
+                solvedByUser=false;
+            }
+        };
+    }
+        public void gameLoop() throws IOException{
+        ActionListener dataListiner = dataListiner();
+        ActionListener solveListiner = solveListiner();
+        while (!Arrays.equals(wordToBeGuessed, gameInProgress)) {
+            gui.solve.addActionListener(solveListiner);
+            gui.textField.addActionListener(dataListiner);
+            }
         if(solvedByUser) {
             gui.board.setText("<html>" + "<strong style=color:green>" + "Wygrana " + "</strong>"+"w " + numberOfTry + " próbach!" + "<br>"+"Słowo do zgadnięcia to " +
                     "<strong style=color:green>" + String.valueOf(wordToBeGuessed) + "</strong>" + "</html>");
-            gui.pack();
         }
         else{
             gui.board.setText("<html>" +  "<strong style=color:red>" + "Przegrana :( "+ "</strong>" +"<br>" +"Słowo do zgadnięcia to " +
                     "<strong style=color:red>" + String.valueOf(wordToBeGuessed) + "</strong>" + "</html>");
-            gui.pack();
         }
+            gui.pack();
 
     }
 
@@ -107,3 +113,4 @@ public class Game extends PrepareGame {
         return letterPresence;
     }
 }
+

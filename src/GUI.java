@@ -11,7 +11,7 @@ public class GUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
-
+        this.setVisible(true);
     }
 
     public static void main(String[] args) {

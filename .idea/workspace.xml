@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami">
+    <list default="true" id="546c7160-d88e-4674-aa85-a73c9ef5a18b" name="Changes" comment="Dodanie przycisku rozwiąż grę">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ideas" beforeDir="false" afterPath="$PROJECT_DIR$/Ideas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ToolWindowDebug.ShowToolbar&quot;: &quot;false&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/maciejlipski/Library/Mobile Documents/com~apple~CloudDocs/Studia/JavaDlaSiebie/ZgadnijSlowo/ZgadnijSlowo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -107,6 +108,10 @@
       <workItem from="1677521052615" duration="1829000" />
       <workItem from="1677585791950" duration="4005000" />
       <workItem from="1677696904943" duration="3000" />
+      <workItem from="1677776317109" duration="599000" />
+      <workItem from="1677851252615" duration="5518000" />
+      <workItem from="1677866072555" duration="1013000" />
+      <workItem from="1678206785990" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="Początkowy commit">
       <created>1677149131656</created>
@@ -150,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677588016502</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dodanie przycisku rozwiąż grę">
+      <created>1677776335311</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677776335311</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +186,7 @@
     <MESSAGE value="Usunięcie dodawania się wiele razy tych samych liter do tablicy wykorzystanych." />
     <MESSAGE value="Dodanie formatowania tekstu i możliwości zgadnięcia całego słowa na raz." />
     <MESSAGE value="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie możliwości rozwiązania przez program i naprawa błedu z polskimi znakami" />
+    <MESSAGE value="Dodanie przycisku rozwiąż grę" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie przycisku rozwiąż grę" />
   </component>
 </project>
